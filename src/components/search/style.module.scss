@@ -1,0 +1,34 @@
+@import './src/styles/colors';
+
+.form__label {
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+.form__input {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  height: .2em;
+  width: 90vw;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  &:placeholder-shown {
+    + {
+      .form__label {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-4rem);
+        transform: translateY(-4rem);
+      }
+    }
+  }
+}
